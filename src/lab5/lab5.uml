@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>lab5.Checking</OriginalElement>
+  <nodes>
+    <node x="-385.0" y="531.0">lab5.Account</node>
+    <node x="-96.97439544807969" y="531.0">lab5.Lab5</node>
+    <node x="-385.0" y="866.5">lab5.Checking</node>
+    <node x="-116.97439544807969" y="793.5">lab5.Saving</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="lab5.Saving" target="lab5.Account" relationship="GENERALIZATION">
+      <point x="-102.99960455192031" y="0.0" />
+      <point x="-137.0" y="886.0" />
+      <point x="-137.0" y="671.5" />
+      <point x="113.0" y="0.0" />
+    </edge>
+    <edge source="lab5.Checking" target="lab5.Account" relationship="GENERALIZATION">
+      <point x="103.0" y="0.0" />
+      <point x="-137.0" y="922.5" />
+      <point x="-137.0" y="671.5" />
+      <point x="113.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="1.0" showDependencies="false" x="-128.5857001244658" y="797.0628945145799" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
