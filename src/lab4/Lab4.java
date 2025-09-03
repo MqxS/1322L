@@ -3,7 +3,19 @@ package lab4;
 import java.util.Scanner;
 
 public class Lab4 {
-    private record Prize(String name, int tickets) {
+    private static class Prize {
+        private final String name;
+        private final int tickets;
+
+        public Prize(final String name, final int tickets) {
+            this.name = name;
+            this.tickets = tickets;
+        }
+
+        public String getName() {
+            return name;
+        }
+
         public int tickets(final boolean holiday) {
             return holiday ? tickets / 2 : tickets;
         }
@@ -36,7 +48,7 @@ public class Lab4 {
         System.out.println();
         for (int i = 0; i < prizes.length; i++) {
             final Prize prize = prizes[i];
-            System.out.printf("%d. %s (%d tickets)%n", i+1, prize.name(), prize.tickets(ParkWallet.getHoliday()));
+            System.out.printf("%d. %s (%d tickets)%n", i+1, prize.getName(), prize.tickets(ParkWallet.getHoliday()));
         }
 
         System.out.print("Buy which prize? ");
@@ -46,11 +58,11 @@ public class Lab4 {
         if (success) {
             System.out.printf(
                     "Bought a %s for %d tickets%n",
-                    selectedPrize.name(),
+                    selectedPrize.getName(),
                     selectedPrize.tickets(ParkWallet.getHoliday())
             );
         } else {
-            System.out.printf("Not enough tickets to buy a %s%n", selectedPrize.name());
+            System.out.printf("Not enough tickets to buy a %s%n", selectedPrize.getName());
         }
         System.out.println();
     }
