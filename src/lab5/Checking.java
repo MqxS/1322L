@@ -18,6 +18,9 @@ public class Checking extends Account {
     @Override
     public String toString() {
         return String.format(
-                "Checking Account #%d, balance $%.2f", getAccountNumber(), getAccountBalance());
+                "Checking Account #%d, balance $%.2f",
+                getAccountNumber(),
+                getAccountBalance()
+        );
     }
 }

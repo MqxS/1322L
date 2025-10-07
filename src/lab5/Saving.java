@@ -31,12 +31,16 @@ public class Saving extends Account {
 
     public double addInterest() {
         final double interest = getAccountBalance() * 0.015;
-        System.out.printf("Customer has earned $%.2f in interest%n", interest);
+        System.out.printf("Customer earned $%.2f in interest%n", interest);
         return super.deposit(interest);
     }
 
     @Override
     public String toString() {
-        return String.format("Saving Account #%d, balance $%.2f", getAccountNumber(), getAccountBalance());
+        return String.format(
+                "Saving Account #%d, balance $%.2f",
+                getAccountNumber(),
+                getAccountBalance()
+        );
     }
 }
