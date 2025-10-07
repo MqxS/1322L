@@ -33,6 +33,10 @@ public class Account {
     }
 
     public String toString() {
-        return String.format("Account #%s, balance $%.2f", accountNumber, accountBalance);
+        return String.format(
+                "Account #%s, balance $%.2f",
+                accountNumber,
+                accountBalance
+        );
     }
 }
