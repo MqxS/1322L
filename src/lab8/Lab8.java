@@ -11,13 +11,13 @@ public class Lab8 {
             throw new InvalidTimeException("Timestamp must be in format HH:MM:SS");
         }
 
-        int hours1 = Integer.parseInt(splitTime1[0]);
-        int minutes1 = Integer.parseInt(splitTime1[1]);
-        int seconds1 = Integer.parseInt(splitTime1[2]);
+        final int hours1 = Integer.parseInt(splitTime1[0]);
+        final int minutes1 = Integer.parseInt(splitTime1[1]);
+        final int seconds1 = Integer.parseInt(splitTime1[2]);
 
-        int hours2 = Integer.parseInt(splitTime2[0]);
-        int minutes2 = Integer.parseInt(splitTime2[1]);
-        int seconds2 = Integer.parseInt(splitTime2[2]);
+        final int hours2 = Integer.parseInt(splitTime2[0]);
+        final int minutes2 = Integer.parseInt(splitTime2[1]);
+        final int seconds2 = Integer.parseInt(splitTime2[2]);
 
         if (hours1 < 0 || hours2 < 0) {
             throw new InvalidTimeException("Hours must be greater than or equal to 0");
@@ -40,8 +40,8 @@ public class Lab8 {
             throw new InvalidTimeException("Seconds must be less than 60");
         }
 
-        int totalSeconds1 = hours1 * 3600 + minutes1 * 60 + seconds1;
-        int totalSeconds2 = hours2 * 3600 + minutes2 * 60 + seconds2;
+        final int totalSeconds1 = hours1 * 3600 + minutes1 * 60 + seconds1;
+        final int totalSeconds2 = hours2 * 3600 + minutes2 * 60 + seconds2;
 
         return Math.abs(totalSeconds1 - totalSeconds2);
     }
@@ -56,11 +56,12 @@ public class Lab8 {
 
             System.out.print("Enter your option: ");
             final int option = scanner.nextInt();
+            scanner.nextLine();
 
+            System.out.println();
             switch (option) {
                 case 1 -> {
-                    System.out.print("\nEnter the start timestamp: ");
-                    scanner.nextLine();
+                    System.out.print("Enter the start timestamp: ");
                     final String startTime = scanner.nextLine();
                     System.out.print("Enter the end timestamp: ");
                     final String endTime = scanner.nextLine();
@@ -74,7 +75,7 @@ public class Lab8 {
                     System.out.println();
                 }
                 case 2 -> {
-                    System.out.println("\nShutting off...");
+                    System.out.println("Shutting off...");
                     return;
                 }
             }

@@ -15,12 +15,12 @@ public class Lab11 {
 
             System.out.print("Enter option: ");
             final int option = scanner.nextInt();
+            scanner.nextLine();
             System.out.println();
 
             switch(option) {
                 case 1 -> {
                     System.out.print("Enter disk title: ");
-                    scanner.nextLine();
                     final String title = scanner.nextLine();
                     System.out.print("Enter director name: ");
                     final String director = scanner.nextLine();

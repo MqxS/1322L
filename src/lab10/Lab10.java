@@ -16,12 +16,12 @@ public class Lab10 {
 
             System.out.print("Enter option: ");
             final int option = scanner.nextInt();
+            scanner.nextLine();
             System.out.println();
 
             switch (option) {
                 case 1 -> {
                     System.out.print("Enter alarm name: ");
-                    scanner.nextLine();
                     final String name = scanner.nextLine();
                     System.out.print("Enter alarm timer in seconds: ");
                     final String duration = scanner.nextLine();
