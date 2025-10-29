@@ -35,29 +35,31 @@ public class Lab9 {
         final int file2Size = file2Lines.size();
         final int maxSize = Math.max(file1Size, file2Size);
         final int minSize = Math.min(file1Size, file2Size);
-        final StringBuilder stringBuilder = new StringBuilder();
 
+        final StringBuilder sb = new StringBuilder();
         for (int i = 0; i < maxSize; i++) {
             if (i >= minSize) {
-                stringBuilder.append("Files have different number of lines\n");
-                return stringBuilder.toString();
+                sb.append("Files have different number of lines");
+                sb.append(System.lineSeparator());
+                return sb.toString();
             }
 
             final String line1 = file1Lines.get(i);
             final String line2 = file2Lines.get(i);
 
             if (!line1.equals(line2)) {
-                stringBuilder.append(String.format("Line %d%n", i + 1))
+                sb.append(String.format("Line %d%n", i + 1))
                         .append(String.format("< %s%n", line1))
                         .append(String.format("> %s%n", line2));
             }
         }
 
-        if (stringBuilder.isEmpty()) {
-            stringBuilder.append("Files are identical\n");
+        if (sb.isEmpty()) {
+            sb.append("Files are identical");
+            sb.append(System.lineSeparator());
         }
 
-        return stringBuilder.toString();
+        return sb.toString();
     }
 
     public static void main(String[] args) {

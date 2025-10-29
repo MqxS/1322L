@@ -1,8 +1,8 @@
 package assignment4;
 
 public class Video extends Media implements IImageStandard, IAudioStandard {
-    final String imageCodec;
-    final String audioCodec;
+    private final String imageCodec;
+    private final String audioCodec;
 
     public Video(final String fileName, final String imageCodec, final String audioCodec) {
         super(fileName);

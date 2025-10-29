@@ -1,7 +1,7 @@
 package assignment4;
 
 public class Music extends Media implements IAudioStandard {
-    final String audioCodec;
+    private final String audioCodec;
 
     public Music(final String fileName, final String audioCodec) {
         super(fileName);

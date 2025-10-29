@@ -1,7 +1,7 @@
 package assignment4;
 
 public class Image extends Media implements IImageStandard {
-    final String imageCodec;
+    private final String imageCodec;
 
     public Image(final String fileName, final String imageCodec) {
         super(fileName);
