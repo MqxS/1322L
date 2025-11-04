@@ -38,7 +38,6 @@ public class Lab10 {
                     alarm.start();
                     alarms.add(alarm);
                     System.out.println(alarm);
-                    System.out.println();
                 }
                 case 2 -> {
                     System.out.println("Here are all the alarms still running:");
@@ -46,11 +45,11 @@ public class Lab10 {
                         final Alarm alarm = alarms.get(i);
                         if (!alarm.isAlive()) {
                             alarms.remove(alarm);
+                            i--;
                             continue;
                         }
                         System.out.println(alarm);
                     }
-                    System.out.println();
                 }
                 case 3 -> {
                     System.out.println("Stopping all alarms...");
@@ -65,6 +64,7 @@ public class Lab10 {
                     return;
                 }
             }
+            System.out.println();
         }
     }
 }

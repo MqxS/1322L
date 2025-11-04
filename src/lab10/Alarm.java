@@ -9,7 +9,7 @@ public class Alarm extends Thread {
 
     public Alarm(final String name, final int durationSeconds) {
         this.id = nextId++;
-        this.name = name.isEmpty() ? String.format("Alarm %d", id): name;
+        this.name = name.isEmpty() ? String.format("Alarm %d", id) : name;
         this.timer = durationSeconds * 1000;
     }
 
@@ -34,6 +34,10 @@ public class Alarm extends Thread {
             }
         }
         System.out.printf("%s has gone off!%n", name);
+    }
+
+    public int getAlarmId() {
+        return id;
     }
 
     @Override

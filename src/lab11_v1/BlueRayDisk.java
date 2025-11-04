@@ -1,4 +1,4 @@
-package lab11;
+package lab11_v1;
 
 public class BlueRayDisk {
     private final String title;
