@@ -1,4 +1,4 @@
-package lab11;
+package lab11_v1;
 
 public class BlueRayCollection {
     private BlueRayDisk head;
@@ -29,7 +29,7 @@ public class BlueRayCollection {
         final StringBuilder sb = new StringBuilder();
         BlueRayDisk current = head;
         while (current != null) {
-            sb.append(current.toString()).append("\n");
+            sb.append(current).append("\n");
             current = current.next;
         }
         return sb.toString();
