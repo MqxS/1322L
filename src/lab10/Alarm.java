@@ -15,7 +15,7 @@ public class Alarm extends Thread {
 
     @Override
     public void run() {
-        while (timer != 0) {
+        while (timer > 0) {
             if (isInterrupted()) {
                 System.out.printf("%s has been interrupted at %d seconds.%n", name, timer/1000);
                 return;
